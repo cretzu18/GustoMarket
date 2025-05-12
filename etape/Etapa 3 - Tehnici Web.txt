@@ -1,0 +1,23 @@
+Task meniu:
+
+Cerinte HTML:
+liniile 40-63
+
+Cerinte SASS:
+a. liniile 27-28, 24
+b. liniile 29-34
+c. liniile 54-63, liniile 85-88
+Ecran mediu: liniile 96-111
+Ecran mic: liniile 136-200
+
+Cerinte printare:
+1. liniile 2-13
+2. liniile 15-17
+3. liniile 19-20
+4. liniile 23-25
+5. liniile 28-36, liniile 48-49, liniile 52-53
+6. liniile 66-75
+7. liniile 56-64
+
+Bonus:
+liniile 202-277

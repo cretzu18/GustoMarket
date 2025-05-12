@@ -1,0 +1,31 @@
+{
+    "cale_baza": "/resurse/imagini/erori",
+    "eroare_default":{
+        "titlu":"Error",
+        "text": "A survenit o eroare!",
+        "imagine":"error.png"
+    },
+    "info_erori": [
+        {
+            "identificator":404,
+            "status":true,
+            "titlu":"404 Not Found",
+            "text": "Pagina căutată nu a fost găsită. Verifică adresa sau revino la pagina principală.",
+            "imagine":"404error.png"
+        },
+        {
+            "identificator":403,
+            "status":true,
+            "titlu":"403 Forbidden",
+            "text": "Nu ai permisiunea de a accesa această resursă. Verifică dacă ai drepturile necesare.",
+            "imagine":"403error.png"
+        },
+        {
+            "identificator":400,
+            "status":true,
+            "titlu":"400 Bad Request",
+            "text": "Cererea ta nu a putut fi înțeleasă de server. Verifică dacă datele introduse sunt corecte.",
+            "imagine":"400error.png"
+        }
+    ]
+}

@@ -1,0 +1,74 @@
+{
+    "cale_galerie": "resurse/imagini/galerie",
+    "imagini": [
+        {
+            "fisier":"Popcorn.png",
+            "titlu":"Popcorn",
+            "descriere":"text descriere",
+            "sfert_ora":"1",
+            "autor":"charlesdeluvio",
+            "sursa":"https://unsplash.com/photos/photo-of-popcorn-kernels-PvAAYZx-yf8",
+            "licenta": "CC-BY 4.0"
+        },
+        {
+            "fisier":"Cheeseburger.png",
+            "titlu":"Cheeseburger",
+            "descriere":"text descriere",
+            "sfert_ora":"1"
+        },
+        {
+            "fisier":"Pui Biryani.png",
+            "titlu":"Pui Biryani",
+            "descriere":"text descriere",
+            "sfert_ora":"1"
+        },
+        {
+            "fisier":"Eclair cu capsuni.png",
+            "titlu":"Eclair cu capsuni",
+            "descriere":"text descriere",
+            "sfert_ora":"1"
+        },
+        {
+            "fisier":"Somon cu ierburi.png",
+            "titlu":"Somon cu ierburi",
+            "descriere":"text descriere",
+            "sfert_ora":"1"
+        },
+        {
+            "fisier":"Pancakes.png",
+            "titlu":"Pancakes",
+            "descriere":"text descriere",
+            "sfert_ora":"1"
+        },
+        {
+            "fisier":"Somon cu legume.png",
+            "titlu":"Somon cu legume",
+            "descriere":"text descriere",
+            "sfert_ora":"1"
+        },
+        {
+            "fisier":"Doner kebab.png",
+            "titlu":"Doner kebab",
+            "descriere":"text descriere",
+            "sfert_ora":"1"
+        },
+        {
+            "fisier":"Ramen.png",
+            "titlu":"Ramen",
+            "descriere":"text descriere",
+            "sfert_ora":"1"
+        },
+        {
+            "fisier":"Supa cu creveti.png",
+            "titlu":"Supa cu creveti",
+            "descriere":"text descriere",
+            "sfert_ora":"1"
+        },
+        {
+            "fisier":"Pizza.png",
+            "titlu":"Pizza",
+            "descriere":"text descriere",
+            "sfert_ora":"1"
+        }
+    ]
+}

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ro">
+    <head>
+        <title>GustoMarket</title>
+
+        <meta name="keywords" content="gust, ingrediente, ingrediente proaspete, produse bio, condimente, fructe, legume, carne, lactate, rețete, deserturi, deserturi fără zahăr">
+        <meta name="description" content="La GustoMarket poți cumpăra cele mai proaspete ingrediente pentru a realiza cele mai delicioase rețete. Livrare la domiciliu doar în București!">
+
+        <%- include("../fragmente/head.ejs") %>
+
+    </head>
+
+    <body>
+        <%- include("../fragmente/header.ejs") %>
+
+        <main>
+            <div id="grid-pagina">
+                <section id="welcome">
+                    <h2>Bine ați venit!</h2>
+                    <q>Mâncarea este simbolul dragostei atunci când cuvintele sunt insuficiente.</q> <p>- Alan D. Wolfelt</p>
+                    <p>Transformă fiecare masă într-o explozie de <b>gust</b> cu <b>ingredientele</b> noastre <b>proaspete</b>! În magazinul nostru online vei găsi tot ce ai nevoie: <b>legume</b> și <b>fructe</b> de sezon, <b>carne</b> de calitate superioară, <b>lactate</b> din surse <b>bio</b> și <b>condimente</b> care dau savoare oricărui preparat. 
+                    Încearcă <b>rețetele</b> noastre și răsfață-te cu <b>deserturi</b>, inclusiv opțiuni <b>fără zahăr</b>, care îți vor încânta papilele gustative fără să îți afecteze sănătatea.</p>
+
+                    <p>Nu uita de cantitatea zilnică de carbohidrați, proteine și grăsimi necesară:</p>
+                    <ul>
+                        <li>
+                            <math xmlns="http://www.w3.org/1998/Math/MathML">
+                                <mi mathvariant="italic" color="red">Grame de carbohidrați</mi>
+                                <mo mathvariant="bold">=</mo>
+                                <mn mathvariant="italic">55</mn><mo mathvariant="bold">%</mo><mo mathvariant="bold">&#x00d7;</mo><mn mathvariant="italic">necesarul caloric</mn><mo mathvariant="bold">&#x00f7;</mo><mn mathvariant="italic">4kcal</mn>
+                            </math>
+                        </li>
+
+                        <li>
+                            <math xmlns="http://www.w3.org/1998/Math/MathML">
+                                <mi mathvariant="italic" color="red">Grame de proteine</mi>
+                                <mo mathvariant="bold">=</mo>
+                                <mn mathvariant="italic">15</mn><mo mathvariant="bold">%</mo><mo mathvariant="bold">&#x00d7;</mo><mn mathvariant="italic">necesarul caloric</mn><mo mathvariant="bold">&#x00f7;</mo ><mn mathvariant="italic">4kcal</mn>
+                            </math>
+                        </li>
+
+                        <li>
+                            <math xmlns="http://www.w3.org/1998/Math/MathML">
+                                <mi mathvariant="italic" color="red">Grame de grăsimi</mi>
+                                <mo mathvariant="bold">=</mo>
+                                <mn mathvariant="italic">30</mn><mo mathvariant="bold">%</mo><mo mathvariant="bold">&#x00d7;</mo><mn mathvariant="italic">necesarul caloric</mn><mo mathvariant="bold">&#x00f7;</mo><mn mathvariant="italic">9kcal</mn>
+                            </math>
+                        </li>
+                    </ul>
+                
+                <div>
+                    <figure>
+                        <picture id="imagine-welcome">
+                                <source srcset="./resurse/imagini/legume_main_page_1200w.jpg" media="(min-width:1100px)">
+                                <source srcset="./resurse/imagini/legume_main_page_900w.jpg" media="(max-width:1100px) and (min-width:600px)">
+                                <source srcset="./resurse/imagini/legume_main_page_550w.jpg" media="(max-width:600px)">
+                                <img src="./resurse/imagini/legume_main_page_pc.jpg" alt="Legume proaspete">
+                        </picture>
+
+                        <figcaption>Legume culese de agricultorii noștri.</figcaption>
+                    </figure>
+                </div>
+                </section>
+
+                <section id="retetele_saptamanii">
+
+                    <h2>Rețetele săptămânale</h2>
+
+                    <img src="./resurse/imagini/retetele_saptamanii.jpg" alt="Retetele saptamanii" usemap="#mapa_retete">
+
+                    <map name="mapa_retete">
+                        <area shape="rect" coords="1,110,230,460" alt="Burrito cu carne de porc" href="./resurse/documente/burrito_carne_de_porc.pdf" target="_blank">
+                        <area shape="circle" coords="420,310,130" alt="Supa crema de morcovi" href="./resurse/documente/supa_crema_morcovi.pdf" target="_blank">
+                        <area shape="circle" coords="760,260,130" alt="Tort de mere" href="./resurse/documente/tort_mere.pdf" target="_blank">
+                    </map>
+
+                    <p>Rețetele care ne-au plăcut săptămâna aceasta:</p>
+
+                    <div class="container-iframe">
+                        <div class="taburi-iframe">
+                        <a href="https://www.youtube.com/embed/krkf7ObsTM4" target="ifr-video">Burrito cu carne de porc</a>
+                        <a href="https://www.youtube.com/embed/8yPRi-zMaBs" target="ifr-video">Supă cremă de morcovi</a>
+                        <a href="https://www.youtube.com/embed/_v-gzY-X05E" target="ifr-video">Tort de mere</a>
+                        </div>
+        
+                        <iframe name="ifr-video" width="560" height="315" src="https://www.youtube.com/embed/krkf7ObsTM4" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                    </div>
+
+                    <p><a href="./resurse/documente/retetele_saptamanii.zip" download="Retetele Saptamanii">Descarcă toate rețetele săptămânii</a></p>
+
+                    <p><a href="https://www.youtube.com/@TheCookingFoodie" target="_blank">Aici poți viziona mai multe rețete</a></p>
+
+                </section>
+
+                <section id="promotii">
+
+                    <h2>Promoții</h2>
+
+                    <article>
+                        <h3>Promoție pentru prima comandă</h3>
+                        <p>Ești client nou și dorești să efectuezi prima comandă? Atunci ai <mark>15% reducere</mark> pe care o poți folosi pentru orice produs din magazin, inclusiv pentru <b>ingredientele</b> bio sau pachetele de <b>rețete.</b></p>
+                    </article>
+
+                    <article>
+                        <h3>Pachet Rețetă Săptămânală</h3>
+
+                        <p>Ai <mark>20% reducere</mark> la pachetul de <b>ingrediente</b> pentru <b>rețetele</b> săptămânale:</p>
+                        <ul>
+                            <li>Burrito cu <b>carne</b> de porc</li>
+                            <li>Supă cremă de morcovi</li>
+                            <li>Tort de mere</li>
+                        </ul>
+                    </article>
+
+                    <article>
+                        <h3>Gătește cu prietenii</h3>
+                        <p>La pachetele de <b>ingrediente</b> ce depășesc <mark>4 porții</mark> primești o cantitate în plus pentru încă <mark>2 porții GRATUIT.</mark></p>
+                    </article>
+
+                    <article>
+                        <h3>Voucher cadou</h3>
+                        <p>La cumpărături lunare de peste <mark>500 RON</mark>, primești un voucher cadou de <mark>50 RON</mark>, pe care îl poți folosi sau oferi cadou prietenilor sau familiei.</p>
+                    </article>
+
+                </section>
+
+                <section id="oferte">
+                    <h2><span class="fa-duotone fa-solid fa-percent fa-beat" style="--fa-animation-duration: 1s"></span> Oferte</h2>
+
+                    <div id="container-tabel">
+                        <table id="tabel-oferte">
+                            <caption>
+                                Cele mai bune oferte ale săptămânii la GustoMarket!
+                            </caption>
+
+                            <thead>
+                                <tr>
+                                    <th>Categorie</th>
+                                    <th>Produs</th>
+                                    <th>Preț vechi</th>
+                                    <th>Preț nou</th>
+                                    <th>Disponibilitate</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td rowspan="2">Legume</td>
+                                    <td>Roșii proaspete(1kg)</td>
+                                    <td>10 RON</td>
+                                    <td>7 RON</td>
+                                    <td>Stoc limitat</td>
+                                </tr>
+                                <tr>
+                                    <td>Castraveți cornichon(1kg)</td>
+                                    <td>12 RON</td>
+                                    <td>10 RON</td>
+                                    <td>În stoc</Td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="2">Fructe</td>
+                                    <td>Mere golden(1kg)</td>
+                                    <td>6 RON</td>
+                                    <td>4,5 RON</td>
+                                    <td>În stoc</td>
+                                </tr>
+                                <tr>
+                                    <td>Banane (1kg)</td>
+                                    <td>9 RON</td>
+                                    <td>7 RON</td>
+                                    <td>În stoc</Td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="2">Lactate</td>
+                                    <td>Lapte 5% grăsime (1L)</td>
+                                    <td>8 RON</td>
+                                    <td>5 RON</td>
+                                    <td>Stoc limitat</td>
+                                </tr>
+                                <tr>
+                                    <td>Brânză de vacă (500g)</td>
+                                    <td>25 RON</td>
+                                    <td>20 RON</td>
+                                    <td>În stoc</Td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="5">Livrare gratuită pe teritoriul Bucureștiului!</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </section>
+
+                <section id="galerie-statica">
+                    <h2>Galerie retete</h2>
+
+                    <div id="grid-galerie">
+                        <%
+                        d = new Date()
+                        d.setMinutes(5)
+                        sfert_ora = String(Math.trunc(d.getMinutes() / 15) + 1)
+                        cnt = 0
+                        for (let imag of locals.imagini) { %>
+                            <% if (imag.sfert_ora && sfert_ora == imag.sfert_ora && cnt < 10) { %>
+                            <figure>
+                                <source srcset="<%- imag.fisier_mic %>" media="screen (max-width: 800px)">
+                                <source srcset="<%- imag.fisier_mediu %>" media="screen and (max-width: 1200px)">
+                            <img src="<%- imag.fisier %>" alt="<%- imag.titlu %>" title="<%- imag.descriere %>">
+                            <figcaption><%- imag.titlu %></figcaption>
+                            </figure>
+                        <% cnt++}} %>
+                    </div>
+                </section>
+
+                <section id="date-user">
+                    <h2>Date Utilizator</h2>
+                    <p>IP-ul tău este: <%= ip%></p>
+                </section>
+
+                <section id="calendar-evenimente">
+                    <h2>Calendar Evenimente</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vitae vulputate diam. Donec non lectus lacinia, maximus diam eget, pellentesque lacus. 
+                    Maecenas lacinia diam augue, a cursus magna dignissim non. Duis dictum viverra ipsum, eu finibus tellus posuere ac. Maecenas id laoreet magna. Sed consequat nisl erat, eu bibendum velit placerat hendrerit. Etiam vestibulum risus tincidunt, 
+                    ullamcorper turpis a, dignissim dui. Vestibulum porttitor malesuada enim, in imperdiet est mattis et.</p>
+                </section>
+
+                <section id="date-site">
+                    <h2>Date site si server</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vitae vulputate diam. Donec non lectus lacinia, maximus diam eget, pellentesque lacus. 
+                    Maecenas lacinia diam augue, a cursus magna dignissim non. Duis dictum viverra ipsum, eu finibus tellus posuere ac. Maecenas id laoreet magna. Sed consequat nisl erat, eu bibendum velit placerat hendrerit. Etiam vestibulum risus tincidunt, 
+                    ullamcorper turpis a, dignissim dui. Vestibulum porttitor malesuada enim, in imperdiet est mattis et.</p>
+                </section>
+            </div>
+        </main>
+
+        <%- include("../fragmente/footer.ejs") %>
+    </body>
+</html>

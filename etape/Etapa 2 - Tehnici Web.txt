@@ -1,0 +1,26 @@
+Task Layout:
+1. liniile 80-94
+2. liniile 314, 370
+3. -
+
+Task design rudimentar:
+a. liniile 25-30, 318, 374
+b. liniile 90, 361, 424
+c. liniile 33-53, 96, 102
+d. linia 101
+e. liniile 182-187, 212-221
+
+Task icon-uri si font extern:
+linia 30, liniile 67-74
+
+Task tabel:
+liniile 261-311
+
+Task stilizare-taburi:
+liniile 203-259
+
+Task link top:
+liniile 138-175
+
+Bonus MathML:
+liniile 77-97 (index.html)

@@ -1,0 +1,32 @@
+Etapa I - Tehnici Web
+1.-
+2.liniile 7-10
+3.liniile 11-15
+4.-
+5.liniile 61,108,140,172,205
+6.liniile 22-58
+7.liniile 67-92, 120, 146, 152-157, 162, 167, 175, 181-186, 196-200
+8.liniile 95-101
+9.-
+10. a. liniile 63-65
+    b. liniile 183-184, 210
+    h. linia 63
+11. a. linia 136
+    b. linia 242
+    c. liniile 122-132
+    d. linia 134
+12. liniile 178-200, 208-236
+13. a. linia 245
+    b. linia 248
+    c. linia 247
+    d. linia 246
+14. linia 257
+15. -
+
+BONUS:
+MathML- liniile 68-92
+map,area - liniile 114-118
+harta iframe - liniile 251-254
+
+Taguri extra:
+mark - liniile 152, 162, 167

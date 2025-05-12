@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ro">
+    <head>
+        <title>GustoMarket</title>
+
+        <meta charset="UTF-8">
+        <meta name="author" content="Crețu Daniel-Florin">
+        <meta name="keywords" content="gust, ingrediente, ingrediente proaspete, produse bio, condimente, fructe, legume, carne, lactate, rețete, deserturi, deserturi fără zahăr">
+        <meta name="description" content="La GustoMarket poți cumpăra cele mai proaspete ingrediente pentru a realiza cele mai delicioase rețete. Livrare la domiciliu doar în București!">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" href="./resurse/ico/favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/svg+xml" href="./resurse/ico/favicon.svg" />
+        <link rel="shortcut icon" href="./resurse/ico/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="./resurse/ico/apple-touch-icon.png" />
+        <link rel="manifest" href="./resurse/ico/site.webmanifest" />
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+        <link rel="stylesheet"  href="./resurse/css/general.css" type="text/css" />
+        <link rel="stylesheet"  href="./resurse/css/nav.css" type="text/css" />
+        <link rel="stylesheet"  href="./resurse/css/print.css" type="text/css" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    </head>
+
+    <body>
+        <header class="c1" id="h1">
+            <h1>Gusto Market</h1>
+            <input id="ch-menu" type="checkbox">
+            <label for="ch-menu" id="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </label>
+            <nav>
+                <ul class="meniu">
+                    <li><div class="fa-solid fa-house"></div><div id="home">Acasă</div>
+                        <ul>
+                            <li><a href="#welcome">Bine ați venit</a></li>
+                            <li><a href="#retetele_saptamanii">Rețetele săptămânale</a></li>
+                            <li><a href="#promotii">Promoții</a></li>
+                            <li><a href="#despre">Despre noi</a></li>
+                            <li><a href="#intrebari">Întrebări frecvente</a></li>
+                        </ul>
+                    </li>
+                    <li><div id="produse">Produse</div>
+                        <ul>
+                            <li><div>Legume</div></li>
+                            <li><div>Fructe</div></li>
+                            <li><div>Lactate și ouă</div></li>
+                            <li><div>Pâine și cereale</div></li>
+                            <li><div>Carne</div></li>
+                            <li><div>Condimente</div></li>
+                        </ul>
+                    </li>
+                    <li><div id="retete">Rețete</div></li>
+                    <li><div id="contact">Contact</div></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div id="grid-pagina">
+                <section id="welcome">
+                    <h2>Bine ați venit!</h2>
+                    <q>Mâncarea este simbolul dragostei atunci când cuvintele sunt insuficiente.</q> <p>- Alan D. Wolfelt</p>
+                    <p>Transformă fiecare masă într-o explozie de <b>gust</b> cu <b>ingredientele</b> noastre <b>proaspete</b>! În magazinul nostru online vei găsi tot ce ai nevoie: <b>legume</b> și <b>fructe</b> de sezon, <b>carne</b> de calitate superioară, <b>lactate</b> din surse <b>bio</b> și <b>condimente</b> care dau savoare oricărui preparat. 
+                    Încearcă <b>rețetele</b> noastre și răsfață-te cu <b>deserturi</b>, inclusiv opțiuni <b>fără zahăr</b>, care îți vor încânta papilele gustative fără să îți afecteze sănătatea.</p>
+
+                    <p>Nu uita de cantitatea zilnică de carbohidrați, proteine și grăsimi necesară:</p>
+                    <ul>
+                        <li>
+                            <math xmlns="http://www.w3.org/1998/Math/MathML">
+                                <mi mathvariant="italic" color="red">Grame de carbohidrați</mi>
+                                <mo mathvariant="bold">=</mo>
+                                <mn mathvariant="italic">55</mn><mo mathvariant="bold">%</mo><mo mathvariant="bold">&#x00d7;</mo><mn mathvariant="italic">necesarul caloric</mn><mo mathvariant="bold">&#x00f7;</mo><mn mathvariant="italic">4kcal</mn>
+                            </math>
+                        </li>
+
+                        <li>
+                            <math xmlns="http://www.w3.org/1998/Math/MathML">
+                                <mi mathvariant="italic" color="red">Grame de proteine</mi>
+                                <mo mathvariant="bold">=</mo>
+                                <mn mathvariant="italic">15</mn><mo mathvariant="bold">%</mo><mo mathvariant="bold">&#x00d7;</mo><mn mathvariant="italic">necesarul caloric</mn><mo mathvariant="bold">&#x00f7;</mo ><mn mathvariant="italic">4kcal</mn>
+                            </math>
+                        </li>
+
+                        <li>
+                            <math xmlns="http://www.w3.org/1998/Math/MathML">
+                                <mi mathvariant="italic" color="red">Grame de grăsimi</mi>
+                                <mo mathvariant="bold">=</mo>
+                                <mn mathvariant="italic">30</mn><mo mathvariant="bold">%</mo><mo mathvariant="bold">&#x00d7;</mo><mn mathvariant="italic">necesarul caloric</mn><mo mathvariant="bold">&#x00f7;</mo><mn mathvariant="italic">9kcal</mn>
+                            </math>
+                        </li>
+                    </ul>
+                
+                <div>
+                    <figure>
+                        <picture id="imagine-welcome">
+                                <source srcset="./resurse/imagini/legume_main_page_1200w.jpg" media="(min-width:1100px)">
+                                <source srcset="./resurse/imagini/legume_main_page_900w.jpg" media="(max-width:1100px) and (min-width:600px)">
+                                <source srcset="./resurse/imagini/legume_main_page_550w.jpg" media="(max-width:600px)">
+                                <img src="./resurse/imagini/legume_main_page_pc.jpg" alt="Legume proaspete">
+                        </picture>
+
+                        <figcaption>Legume culese de agricultorii noștri.</figcaption>
+                    </figure>
+                </div>
+                </section>
+
+                <section id="retetele_saptamanii">
+
+                    <h2>Rețetele săptămânale</h2>
+
+                    <img src="./resurse/imagini/retetele_saptamanii.jpg" alt="Retetele saptamanii" usemap="#mapa_retete">
+
+                    <map name="mapa_retete">
+                        <area shape="rect" coords="1,110,230,460" alt="Burrito cu carne de porc" href="./resurse/documente/burrito_carne_de_porc.pdf" target="_blank">
+                        <area shape="circle" coords="420,310,130" alt="Supa crema de morcovi" href="./resurse/documente/supa_crema_morcovi.pdf" target="_blank">
+                        <area shape="circle" coords="760,260,130" alt="Tort de mere" href="./resurse/documente/tort_mere.pdf" target="_blank">
+                    </map>
+
+                    <p>Rețetele care ne-au plăcut săptămâna aceasta:</p>
+
+                    <div class="container-iframe">
+                        <div class="taburi-iframe">
+                        <a href="https://www.youtube.com/embed/krkf7ObsTM4" target="ifr-video">Burrito cu carne de porc</a>
+                        <a href="https://www.youtube.com/embed/8yPRi-zMaBs" target="ifr-video">Supă cremă de morcovi</a>
+                        <a href="https://www.youtube.com/embed/_v-gzY-X05E" target="ifr-video">Tort de mere</a>
+                        </div>
+        
+                        <iframe name="ifr-video" width="560" height="315" src="https://www.youtube.com/embed/krkf7ObsTM4" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                    </div>
+
+                    <p><a href="./resurse/documente/retetele_saptamanii.zip" download="Retetele Saptamanii">Descarcă toate rețetele săptămânii</a></p>
+
+                    <p><a href="https://www.youtube.com/@TheCookingFoodie" target="_blank">Aici poți viziona mai multe rețete</a></p>
+
+                </section>
+
+                <section id="promotii">
+
+                    <h2>Promoții</h2>
+
+                    <article>
+                        <h3>Promoție pentru prima comandă</h3>
+                        <p>Ești client nou și dorești să efectuezi prima comandă? Atunci ai <mark>15% reducere</mark> pe care o poți folosi pentru orice produs din magazin, inclusiv pentru <b>ingredientele</b> bio sau pachetele de <b>rețete.</b></p>
+                    </article>
+
+                    <article>
+                        <h3>Pachet Rețetă Săptămânală</h3>
+
+                        <p>Ai <mark>20% reducere</mark> la pachetul de <b>ingrediente</b> pentru <b>rețetele</b> săptămânale:</p>
+                        <ul>
+                            <li>Burrito cu <b>carne</b> de porc</li>
+                            <li>Supă cremă de morcovi</li>
+                            <li>Tort de mere</li>
+                        </ul>
+                    </article>
+
+                    <article>
+                        <h3>Gătește cu prietenii</h3>
+                        <p>La pachetele de <b>ingrediente</b> ce depășesc <mark>4 porții</mark> primești o cantitate în plus pentru încă <mark>2 porții GRATUIT.</mark></p>
+                    </article>
+
+                    <article>
+                        <h3>Voucher cadou</h3>
+                        <p>La cumpărături lunare de peste <mark>500 RON</mark>, primești un voucher cadou de <mark>50 RON</mark>, pe care îl poți folosi sau oferi cadou prietenilor sau familiei.</p>
+                    </article>
+
+                </section>
+
+                <section id="oferte">
+                    <h2><span class="fa-duotone fa-solid fa-percent fa-beat" style="--fa-animation-duration: 1s"></span> Oferte</h2>
+
+                    <div id="container-tabel">
+                        <table id="tabel-oferte">
+                            <caption>
+                                Cele mai bune oferte ale săptămânii la GustoMarket!
+                            </caption>
+
+                            <thead>
+                                <tr>
+                                    <th>Categorie</th>
+                                    <th>Produs</th>
+                                    <th>Preț vechi</th>
+                                    <th>Preț nou</th>
+                                    <th>Disponibilitate</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td rowspan="2">Legume</td>
+                                    <td>Roșii proaspete(1kg)</td>
+                                    <td>10 RON</td>
+                                    <td>7 RON</td>
+                                    <td>Stoc limitat</td>
+                                </tr>
+                                <tr>
+                                    <td>Castraveți cornichon(1kg)</td>
+                                    <td>12 RON</td>
+                                    <td>10 RON</td>
+                                    <td>În stoc</Td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="2">Fructe</td>
+                                    <td>Mere golden(1kg)</td>
+                                    <td>6 RON</td>
+                                    <td>4,5 RON</td>
+                                    <td>În stoc</td>
+                                </tr>
+                                <tr>
+                                    <td>Banane (1kg)</td>
+                                    <td>9 RON</td>
+                                    <td>7 RON</td>
+                                    <td>În stoc</Td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="2">Lactate</td>
+                                    <td>Lapte 5% grăsime (1L)</td>
+                                    <td>8 RON</td>
+                                    <td>5 RON</td>
+                                    <td>Stoc limitat</td>
+                                </tr>
+                                <tr>
+                                    <td>Brânză de vacă (500g)</td>
+                                    <td>25 RON</td>
+                                    <td>20 RON</td>
+                                    <td>În stoc</Td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="5">Livrare gratuită pe teritoriul Bucureștiului!</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </section>
+
+                <section id="despre">
+                    <h2>Despre noi</h2>
+
+                    <p>La Gusto Market, suntem pasionați de gătit și de un stil de viață sănătos. Ne dorim să îți aducem în fiecare zi <b>ingrediente</b> de calitate superioară, alese cu grijă de la cei mai buni furnizori locali și bio, pentru ca tu să te bucuri de <b>gustul</b> autentic al preparatelor tale. 
+                    Fie că ești un bucătar amator sau un profesionist, suntem aici pentru a-ți oferi tot ce ai nevoie pentru a crea mese sănătoase, savuroase și pline de energie.</p>
+
+                    <p>Ce ne face diferiți?</p>
+
+                    <ol>
+                        <li><b>Ingrediente proaspete</b> și de calitate: Alegem doar cele mai bune produse pentru tine: de la <b>fructe</b> și <b>legume</b> proaspete, <b>carne</b> și <b>lactate</b> bio, până la <b>condimente</b> naturale care dau savoare fiecărei mese.</li>
+                        <li><b>Rețetele</b> noastre sunt pregătite folosind tehnici moderne de gătit, inclusiv <i>sous-vide</i>, care garantează o textură fragedă și uniformă. Acest proces delicat este ideal pentru <b>carnea</b> de porc sau pui, păstrându-le suculente și aromate.</li>
+                        <li>Produse pentru toate gusturile: De la preparate tradiționale și <i>comfort food</i>, până la rețete vegane, fără gluten sau <b>fără zahăr</b> avem opțiuni pentru toți membrii familiei, indiferent de preferințele alimentare.</li>
+                        <li>Angajamentul nostru pentru sustenabilitate: Suntem dedicați unui viitor mai verde și mai sănătos, așa că preferăm <b>produsele bio</b> și susținem practici agricole sustenabile.</li>
+                    </ol>
+
+                    <p>Misiunea noastră este simplă: să facem gătitul mai ușor și mai plăcut pentru tine, oferindu-ți <b>ingrediente</b> de calitate, <b>rețete</b> inovative și inspirație pentru o viață sănătoasă. La Gusto Market, 
+                        vrem să aducem un strop de bucurie în fiecare masă și să îți oferim tot ce ai nevoie pentru a crea momente delicioase alături de cei dragi.</p>
+                </section>
+
+                <section id="intrebari">
+                    <h2>Întrebări frecvente</h2>
+
+                    <details>
+                        <summary>De unde provin <b>ingredientele</b> și produsele voastre?</summary>
+                        <p>Selectăm cu grijă furnizori locali și folosim doar <b>ingrediente</b> bio și <i>antioxidanți</i> din surse naturale.</p>
+                    </details>
+
+                    <details>
+                        <summary><b>Produsele</b> sunt <b>bio</b> și naturale?</summary>
+                        <p>Da! Oferim o gamă largă de <b>produse bio</b> și naturale.</p>
+                    </details>
+
+                    <details>
+                        <summary>Ce metode de plată acceptați?</summary>
+                        <p>Cu cardul, transfer bancar și ramburs la livrare.</p>
+                    </details>
+
+                    <details>
+                        <summary>În ce zone livrați?</summary>
+                        <p>Pe tot teritoriul Bucureștiului.</p>
+                    </details>
+
+                    <details>
+                        <summary>Pot contribui cu propriile rețete?</summary>
+                        <p>Da! Ne poți trimite pe e-mail.</p>
+                    </details>
+                </section>
+
+                <section id="calendar-evenimente">
+                    <h2>Calendar Evenimente</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vitae vulputate diam. Donec non lectus lacinia, maximus diam eget, pellentesque lacus. 
+                    Maecenas lacinia diam augue, a cursus magna dignissim non. Duis dictum viverra ipsum, eu finibus tellus posuere ac. Maecenas id laoreet magna. Sed consequat nisl erat, eu bibendum velit placerat hendrerit. Etiam vestibulum risus tincidunt, 
+                    ullamcorper turpis a, dignissim dui. Vestibulum porttitor malesuada enim, in imperdiet est mattis et.</p>
+                </section>
+
+                <section id="date-site">
+                    <h2>Date site si server</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vitae vulputate diam. Donec non lectus lacinia, maximus diam eget, pellentesque lacus. 
+                    Maecenas lacinia diam augue, a cursus magna dignissim non. Duis dictum viverra ipsum, eu finibus tellus posuere ac. Maecenas id laoreet magna. Sed consequat nisl erat, eu bibendum velit placerat hendrerit. Etiam vestibulum risus tincidunt, 
+                    ullamcorper turpis a, dignissim dui. Vestibulum porttitor malesuada enim, in imperdiet est mattis et.</p>
+                </section>
+            </div>
+        </main>
+
+        <footer>
+            <a href="#" id="link-top" title="Mergi Sus"><div>&#129081;</div></a>
+
+            <address>
+                <a href="tel:+40742492415">Telefon</a>
+                <a href="https://wa.me/0752492415?">WhatsApp</a>
+                <a href="mailto:gustomarket@gmail.com">Mail</a><br>
+                <a href="https://www.google.com/maps/place/Facultatea+de+Matematic%C4%83+%C8%99i+Informatic%C4%83/@44.4355355,26.0995867,17z/data=!3m1!4b1!4m6!3m5!1s0x40b1ff472f47f047:0x493984726f0235f9!8m2!3d44.4355355!4d26.0995867!16s%2Fg%2F1td63tdh?entry=ttu&g_ep=EgoyMDI1MDMwNC4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+                    Strada Academiei 14, București 010014
+                </a><br>
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2849.2177337299194!2d26.097011676807693!3d44.43553547108982!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b1ff472f47f047%3A0x493984726f0235f9!2sFacultatea%20de%20Matematic%C4%83%20%C8%99i%20Informatic%C4%83!5e0!3m2!1sen!2sro!4v1719916800000!5m2!1sen!2sro" 
+                    width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy">
+                </iframe>
+            </address>
+
+            <p><small>Copyright &copy; <time datetime="2025-03-05"> 05 Martie 2025</time> </small></p>
+            <div id="banner"><p>Aceste este un proiect școlar!</p></div>
+            <div id="watermark"><p>Crețu Daniel-Florin</p></div>
+        </footer>
+    </body>
+</html>

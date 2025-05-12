@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ro">
+    <head>
+        <title>Despre</title>
+
+        <meta name="keywords" content="gust, ingrediente, ingrediente proaspete, produse bio, condimente, fructe, legume, carne, lactate, rețete, deserturi, deserturi fără zahăr">
+        <meta name="description" content="La GustoMarket poți cumpăra cele mai proaspete ingrediente pentru a realiza cele mai delicioase rețete. Livrare la domiciliu doar în București!">
+        <link rel="stylesheet" type="text/css" href="/resurse/css/despre.css">
+
+        <%- include("../fragmente/head.ejs") %>
+
+    </head>
+
+    <body>
+        <%- include("../fragmente/header.ejs") %>
+
+        <main>
+            <section id="despre">
+                <div class="video-container">
+                    <video controls preload="none" poster="/resurse/imagini/logo.jpg">
+                        <source src="/resurse/video/despre.mp4" type="video/mp4">
+                        <source src="/resurse/video/despre.webm" type="video/webm">
+                        <track src="/resurse/tracks/despre-romana.vtt" kind="subtitles" srclang="ro" label="Română" default>
+                        <track src="/resurse/tracks/despre-engleza.vtt" kind="subtitles" srclang="en" label="English">
+                        <track src="/resurse/tracks/despre-germana.vtt" kind="subtitles" srclang="gr" label="Deutsch">
+                    </video>
+                </div>
+
+                <style>
+                    video::cue{
+                        background-color: transparent;
+                        color: white;
+                        font-size: 1em;
+                        text-shadow: 5px 5px 10px black;
+                    }
+                </style>
+
+                <h2>Despre noi</h2>
+
+                <p>La Gusto Market, suntem pasionați de gătit și de un stil de viață sănătos. Ne dorim să îți aducem în fiecare zi <b>ingrediente</b> de calitate superioară, alese cu grijă de la cei mai buni furnizori locali și bio, pentru ca tu să te bucuri de <b>gustul</b> autentic al preparatelor tale. 
+                Fie că ești un bucătar amator sau un profesionist, suntem aici pentru a-ți oferi tot ce ai nevoie pentru a crea mese sănătoase, savuroase și pline de energie.</p>
+
+                <p>Ce ne face diferiți?</p>
+
+                <ol>
+                    <li><b>Ingrediente proaspete</b> și de calitate: Alegem doar cele mai bune produse pentru tine: de la <b>fructe</b> și <b>legume</b> proaspete, <b>carne</b> și <b>lactate</b> bio, până la <b>condimente</b> naturale care dau savoare fiecărei mese.</li>
+                    <li><b>Rețetele</b> noastre sunt pregătite folosind tehnici moderne de gătit, inclusiv <i>sous-vide</i>, care garantează o textură fragedă și uniformă. Acest proces delicat este ideal pentru <b>carnea</b> de porc sau pui, păstrându-le suculente și aromate.</li>
+                    <li>Produse pentru toate gusturile: De la preparate tradiționale și <i>comfort food</i>, până la rețete vegane, fără gluten sau <b>fără zahăr</b> avem opțiuni pentru toți membrii familiei, indiferent de preferințele alimentare.</li>
+                    <li>Angajamentul nostru pentru sustenabilitate: Suntem dedicați unui viitor mai verde și mai sănătos, așa că preferăm <b>produsele bio</b> și susținem practici agricole sustenabile.</li>
+                </ol>
+
+                <p>Misiunea noastră este simplă: să facem gătitul mai ușor și mai plăcut pentru tine, oferindu-ți <b>ingrediente</b> de calitate, <b>rețete</b> inovative și inspirație pentru o viață sănătoasă. La Gusto Market, 
+                    vrem să aducem un strop de bucurie în fiecare masă și să îți oferim tot ce ai nevoie pentru a crea momente delicioase alături de cei dragi.</p>
+            </section>
+
+            <section id="intrebari">
+                <h2>Întrebări frecvente</h2>
+
+                <details>
+                    <summary>De unde provin <b>ingredientele</b> și produsele voastre?</summary>
+                    <p>Selectăm cu grijă furnizori locali și folosim doar <b>ingrediente</b> bio și <i>antioxidanți</i> din surse naturale.</p>
+                </details>
+
+                <details>
+                    <summary><b>Produsele</b> sunt <b>bio</b> și naturale?</summary>
+                    <p>Da! Oferim o gamă largă de <b>produse bio</b> și naturale.</p>
+                </details>
+
+                <details>
+                    <summary>Ce metode de plată acceptați?</summary>
+                    <p>Cu cardul, transfer bancar și ramburs la livrare.</p>
+                </details>
+
+                <details>
+                    <summary>În ce zone livrați?</summary>
+                    <p>Pe tot teritoriul Bucureștiului.</p>
+                </details>
+
+                <details>
+                    <summary>Pot contribui cu propriile rețete?</summary>
+                    <p>Da! Ne poți trimite pe e-mail.</p>
+                </details>
+            </section>
+        </main>
+
+        <%- include("../fragmente/footer.ejs") %>
+    </body>
+</html>

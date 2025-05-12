@@ -1,0 +1,469 @@
+body {
+    --culoare-fundal: #D3E025;
+    --culoare-verde-deschis: #2CE019;
+    --culoare-verde-inchis: #7EE016;
+    --culoare-aurie: #E0B624;
+    --culoare-deschisa: #E3E0C5;
+    --culoare-inchisa: #7e5a44;
+
+    background-color: var(--culoare-fundal);
+}
+
+#banner{
+    display: none;
+}
+
+#watermark{
+    display: none;
+}
+
+html{
+    font-size:16px;
+
+    transition: font-size 250ms linear;
+}
+
+body{
+    --spatiere-pagina:15px;
+    padding-left: var(--spatiere-pagina); 
+    padding-right: var(--spatiere-pagina);
+
+    font-family: "Lato", sans-serif;
+
+    counter-reset: 1;
+}
+
+header {
+    grid-area: header;
+    background-color: var(--culoare-verde-deschis);
+    color: white;
+    padding: 10px; 
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px;
+}
+
+
+footer {
+    grid-area: footer;
+    background-color: var(--culoare-verde-inchis);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 10px;
+}
+
+h1{
+    font-size: 3rem;
+}
+
+h2{
+    font-size: 1.4rem;
+}
+
+h3{
+    font-size: 1.3rem;
+}
+
+.fa-carrot, .fa-lemon, .fa-cow, .fa-bread-slice, .fa-bacon, .fa-pepper-hot{
+    font-size: 1rem;
+    color: black;
+}
+
+.fa-percent{
+    font-size: 1.4rem;
+}
+
+#welcome ul li{
+    font-size: 0.8rem;
+}
+
+#grid-pagina{
+    display: grid;
+    grid-template-areas: "header header header"
+                         "welcome welcome welcome"
+                         "calendar-evenimente oferte retete"
+                         "promotii oferte retete"
+                         "promotii date-user date-site"
+                         "galerie-statica galerie-statica galerie-statica"
+                         "footer footer footer";
+
+    gap: 10px;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#grid-pagina > * {
+    background-color: var(--culoare-deschisa);
+    border: 2px solid var(--culoare-aurie);
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+}
+
+#welcome{
+    grid-area: welcome;
+}
+
+#oferte{
+    grid-area: oferte;
+    place-items: center;
+}
+
+#promotii{
+    grid-area: promotii;
+}
+
+#galerie-statica{
+    grid-area: galerie-statica;
+}
+
+#retetele_saptamanii{
+    grid-area: retete;
+}
+
+#date-user{
+    grid-area: date-user;
+}
+
+#calendar-evenimente{
+    grid-area: calendar-evenimente;
+}
+
+#date-site{
+    grid-area: date-site;
+}
+
+#link-top{
+    --dim-font: 40px;
+
+    position:fixed;
+    bottom:0.3em;
+    opacity:0.25;
+    right:0.3em;
+    width:3rem;
+    box-sizing: border-box;
+    height:3rem;
+    line-height:3rem;
+    text-align:center;
+    
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    background-color: var(--culoare-verde-inchis);
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+
+    transition: opacity 500ms linear;
+}
+
+#link-top:hover {
+    opacity: 1;
+}
+
+#link-top div{
+    font-size: var(--dim-font);
+    color: red;
+    text-align: center;
+    padding-top: 0.1em;
+    display:inline-block;
+
+    transition: font-size 500ms linear;
+}
+
+#link-top:hover div{
+    font-size: calc(var(--dim-font) * 1.5);
+}
+
+
+#grid-pagina > figure{
+    margin: 0;
+}
+
+#grid-pagina img{
+    width: 100%;
+    max-width: 600px;
+
+    transition: max-width 500ms linear;
+}
+
+main{
+    padding-left: var(--spatiere-pagina);
+    padding-right: var(--spatiere-pagina);
+}
+
+#imagine-welcome{
+    display: flex;
+    justify-content: center;
+}
+
+figcaption{
+    text-align:center;
+}
+
+.container-iframe{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    width: fit-content;
+    margin-bottom: 50px;
+} 
+
+.container-iframe iframe{
+    max-width: 600px;
+
+    border: 5px solid var(--culoare-aurie);
+    background-color: white;
+    border-radius: 10px;
+
+    transition: height 500ms linear,
+                max-width 500ms linear;
+}
+
+.taburi-iframe {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    right: 4px;
+    bottom: -40px;
+}
+
+.taburi-iframe > a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 140px;
+    height: 40px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    color: black !important; 
+    border: 2px solid var(--culoare-aurie);
+    background-color: var(--culoare-verde-inchis);
+    border-top: none;
+    border-radius: 0 0 15px 15px;
+    text-align: center;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-left: 5px;
+    background-image: none !important;
+
+    transition: background-color 500ms linear, 
+                color 500ms linear,
+                box-shadow 500ms linear, 
+                width 300ms linear, 
+                height 300ms linear, 
+                font-size 250ms linear;
+}
+
+.taburi-iframe > a::before{
+    content: none !important;
+}
+
+.taburi-iframe > a:hover{
+    background-color: lightyellow;
+    box-shadow: none;
+}
+
+#tabel-oferte{
+    width: 650px;
+    height: 600px;
+    margin: 5px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+#tabel-oferte td{
+    border: 2px solid var(--culoare-aurie);
+}
+
+#tabel-oferte thead, #tabel-oferte tfoot{
+    background-color: var(--culoare-fundal);
+    color: white;
+}
+
+#tabel-oferte thead th{
+    border: 4px solid var(--culoare-aurie);
+}
+
+#tabel-oferte th, #tabel-oferte td{
+    padding: 12px;
+    text-align: center;
+    background: none;
+}
+
+#tabel-oferte tbody tr:nth-child(even) td{
+    box-shadow: inset 0px 0px 10px rgba(103, 255, 80, 1);
+    color:black
+}
+
+#tabel-oferte tbody tr:nth-child(odd) td{
+    box-shadow: inset 0px 0px 10px rgba(45, 164, 26, 1);
+    color: black;
+}
+
+#tabel-oferte tbody tr{
+    transition: background-color 750ms linear,
+                font-size 750ms linear;
+}
+
+#tabel-oferte tbody tr:hover{
+    background-color: var(--culoare-verde-deschis);
+    font-size: 120%;
+}
+
+#tabel-oferte caption{
+    text-align: left;
+}
+
+main a{
+    color: var(--culoare-inchisa);
+    background-image: radial-gradient(circle, var(--culoare-aurie) 0%, var(--culoare-aurie) 40%, transparent 80%, transparent 100%);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 0;
+    transition: background-size 200ms linear;
+}
+
+main a:hover{
+    background-size: 100%;
+}
+
+main a:visited{
+    color: var(--culoare-verde-inchis);
+}
+
+main a:active{
+    border: 0.2rem solid var(--culoare-aurie);
+}
+
+main a[href^="http"]::before{
+    content: "⮳";
+    font-size: 1.5em;
+}
+
+
+main a[href^="http"]:hover::before{
+    color: red;
+}
+
+@media screen and (max-width:1200px) {
+    html{
+        font-size:14px;
+    }
+
+    body{
+        --spatiere-pagina:10px;
+    }
+
+    #link-top{
+        --dim-font: 35px;
+    }
+
+    #grid-pagina img{
+        max-width: 450px;
+    }
+
+    .container-iframe iframe{
+        max-width: 450px;
+        height: 275px;
+    }
+
+    .taburi-iframe{
+        bottom: -35px;
+    }
+
+    .taburi-iframe > a{
+        width: 80px;
+        height: 35px;
+        font-size: 10px;
+    }
+
+    #container-tabel{
+        width: 35em;
+        overflow-x: auto;
+        white-space: nowrap;
+    } 
+
+    #grid-pagina{ 
+        grid-template-areas: "header header" 
+                             "welcome welcome"
+                             "promotii  oferte"
+                             "retete retete"
+                             "date-site calendar-evenimente"
+                             "galerie-statica galerie-statica"
+                             "date-user date-user"
+                             "footer footer";
+
+        gap: 7px;
+    }
+
+    #grid-pagina > * {
+        padding: 6px;
+    }
+}
+
+@media screen and (max-width:800px) { 
+    html{
+        font-size:12px;
+    }
+
+    body{
+        --spatiere-pagina:5px;
+    }
+
+    h1{
+        font-size: 1.5rem;
+    }
+
+    #link-top{
+        --dim-font: 30px;
+    }
+
+
+    #grid-pagina img{
+        max-width: 300px;
+    }
+
+    .container-iframe iframe{
+        max-width: 300px;
+        height: 225px;
+    }
+
+    .taburi-iframe{
+        bottom: -20px;
+    }
+
+    .taburi-iframe > a{
+        width: 60px;
+        height: 20px;
+        font-size: 8px;
+    }
+
+    #container-tabel{
+        width: 28em;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    #grid-pagina{
+        grid-template-areas: "header"
+                             "welcome"
+                             "oferte"
+                             "promotii"
+                             "retete"
+                             "date-site"
+                             "calendar-evenimente"
+                             "galerie-statica"
+                             "date-user"
+                             "footer";
+
+        gap: 5px;
+    }
+
+    #grid-pagina > * {
+        padding: 2px;
+    }
+}
