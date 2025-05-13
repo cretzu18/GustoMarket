@@ -1,0 +1,16 @@
+<div id="grid-galerie">
+    <%
+    d = new Date()
+    d.setMinutes(5)
+    sfert_ora = String(Math.trunc(d.getMinutes() / 15) + 1)
+    cnt = 0
+    for (let imag of locals.imagini) { %>
+        <% if (imag.sfert_ora && sfert_ora == imag.sfert_ora && cnt < 10) { %>
+        <figure>
+            <source srcset="<%- imag.fisier_mic %>" media="screen (max-width: 800px)">
+            <source srcset="<%- imag.fisier_mediu %>" media="screen and (max-width: 1200px)">
+        <img src="<%- imag.fisier %>" alt="<%- imag.titlu %>" title="<%- imag.descriere %>">
+        <figcaption><%- imag.titlu %></figcaption>
+        </figure>
+    <% cnt++}} %>
+</div>
