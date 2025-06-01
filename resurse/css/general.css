@@ -3,11 +3,42 @@ body {
     --culoare-verde-deschis: #2CE019;
     --culoare-verde-inchis: #7EE016;
     --culoare-aurie: #E0B624;
-    --culoare-deschisa: #E3E0C5;
+    --culoare-deschisa: #e3e0c5;
     --culoare-inchisa: #7e5a44;
 
     background-color: var(--culoare-fundal);
 }
+
+body.dark {
+    --culoare-fundal: #6a6a6a;            
+    --culoare-verde-deschis: #7CFF6B;    
+    --culoare-verde-inchis: #3A8032;    
+    --culoare-aurie: #d9a421;           
+    --culoare-deschisa: #b8b8b8;         
+    --culoare-inchisa: #e3c7b1;          
+
+    background-color: var(--culoare-fundal);
+}
+
+#schimba_tema {
+    width: 1em;
+    height: 1em;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+body:not(.dark) #schimba_tema {
+    background-image: url('/resurse/imagini/soare.png');
+}
+
+body.dark #schimba_tema {
+    background-image: url('/resurse/imagini/luna.png');
+}
+
 
 #banner{
     display: none;
@@ -42,6 +73,7 @@ header {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     margin-bottom: 10px;
 }
+
 
 
 footer {

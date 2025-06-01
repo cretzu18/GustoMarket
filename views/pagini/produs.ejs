@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html  lang="ro">
+    <head>
+        <title><%- locals.prod.nume %></title>
+
+        <meta name="keywords" content="gust, ingrediente, ingrediente proaspete, produse bio, condimente, fructe, legume, carne, lactate, rețete, deserturi, deserturi fără zahăr">
+        <meta name="description" content="La GustoMarket poți cumpăra cele mai proaspete ingrediente pentru a realiza cele mai delicioase rețete. Livrare la domiciliu doar în București!">
+        <link rel="stylesheet" type="text/css" href="/resurse/css/produs.css">
+
+        <%- include("../fragmente/head.ejs");  %> 
+    </head>
+    <body>
+        
+    <%- include("../fragmente/header.ejs");  %> 
+
+    <main>
+        <section>
+            <article id="art-produs">
+                <h3><span class="nume"><%- locals.prod.nume %></span></h3>
+                <p>Pret: <span class="pret"><%- locals.prod.pret %> </span></p>
+                <p>Descriere: <span class="descriere"><%- locals.prod.descriere %> </span></p>
+                <p>Gramaj: <span class="gramaj"><%- locals.prod.gramaj %> </span></p>
+                <p>Categorie: <span class="categorie"><%- locals.prod.tip_produs %> </span></p>
+                <p>Vegan: <span class="vegan"><%- locals.prod.vegan ? "Da" : "Nu"%> </span></p>
+                <p>Data expirare:
+                <time class="val-data-expirare" datetime="<%= prod.data_expirare %>">
+                    <script>
+                        function capitalize(str) {
+                            return str.charAt(0).toUpperCase() + str.slice(1);
+                        }
+
+                        document.querySelectorAll('time.val-data-expirare').forEach(el => {
+                            const dateStr = el.getAttribute('datetime');
+                            if (dateStr) {
+                            const date = new Date(dateStr);
+                            if (!isNaN(date)) {
+                                const zi = date.getDate();
+                                const luna = date.toLocaleDateString('ro-RO', { month: 'long' });
+                                const an = date.getFullYear();
+                                const ziSapt = date.toLocaleDateString('ro-RO', { weekday: 'long' });
+                                el.textContent = `${zi} ${capitalize(luna)} ${an} (${capitalize(ziSapt)})`;
+                            } else {
+                                el.textContent = 'N/A';
+                            }
+                            } else {
+                            el.textContent = 'N/A';
+                            }
+                        });
+                    </script>
+                </time>
+                </p>
+                <p>Ambalaj: <span class="ambalaj"><%- locals.prod.tip_ambalaj %> </span></p>
+                <p>Tara: <span calss="tara"><%- locals.prod.tara %></span></p>
+                <figure class="imag-produs">
+                    <img  src="/<%- locals.prod.imagine %>" alt="[imagine <%- locals.prod.nume %>]" />
+                </figure>    
+            </article>
+        </section>
+    </main>
+    
+    <%- include("../fragmente/footer.ejs");  %> 
+
+    </body>
+</html>

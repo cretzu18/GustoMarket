@@ -16,6 +16,9 @@
         <main>
             <div id="grid-pagina">
                 <section id="welcome">
+                    <video autoplay muted loop playsinline id="video-background">
+                        <source src="/resurse/video/background.mp4" type="video/mp4">
+                    </video>
                     <h2>Bine ați venit!</h2>
                     <q>Mâncarea este simbolul dragostei atunci când cuvintele sunt insuficiente.</q> <p>- Alan D. Wolfelt</p>
                     <p>Transformă fiecare masă într-o explozie de <b>gust</b> cu <b>ingredientele</b> noastre <b>proaspete</b>! În magazinul nostru online vei găsi tot ce ai nevoie: <b>legume</b> și <b>fructe</b> de sezon, <b>carne</b> de calitate superioară, <b>lactate</b> din surse <b>bio</b> și <b>condimente</b> care dau savoare oricărui preparat. 
@@ -196,8 +199,10 @@
                 </section>
 
                 <section id="galerie-statica">
-                    <h2>Galerie retete</h2>
-
+                    <div id="container-text">
+                        <h2 id="text">Galerie retete</h2>
+                        <h2 id="text-reflectat">Galerie retete</h2>
+                    </div>
                     <%- include("../fragmente/galerie-statica.ejs") %>
                 </section>
 

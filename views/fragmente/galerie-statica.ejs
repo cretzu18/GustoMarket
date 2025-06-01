@@ -1,16 +1,32 @@
+<%
+d = new Date();
+d.setMinutes(5);
+sfert_ora = String(Math.trunc(d.getMinutes() / 15) + 1);
+
+// Filtrăm imaginile care respectă condiția de sfert_ora
+let imaginiFiltrate = locals.imagini.filter(img => img.sfert_ora == sfert_ora);
+
+// Le amestecăm
+for (let i = imaginiFiltrate.length - 1; i > 0; i--) {
+    let j = Math.floor(Math.random() * (i + 1));
+    [imaginiFiltrate[i], imaginiFiltrate[j]] = [imaginiFiltrate[j], imaginiFiltrate[i]];
+}
+
+let numarPoze = 10;
+
+// Selectăm primele `numarPoze` imagini din cele amestecate
+let imaginiAlese = imaginiFiltrate.slice(0, numarPoze);
+%>
+
 <div id="grid-galerie">
-    <%
-    d = new Date()
-    d.setMinutes(5)
-    sfert_ora = String(Math.trunc(d.getMinutes() / 15) + 1)
-    cnt = 0
-    for (let imag of locals.imagini) { %>
-        <% if (imag.sfert_ora && sfert_ora == imag.sfert_ora && cnt < 10) { %>
+    <% for (let imag of imaginiAlese) { %>
         <figure>
-            <source srcset="<%- imag.fisier_mic %>" media="screen (max-width: 800px)">
-            <source srcset="<%- imag.fisier_mediu %>" media="screen and (max-width: 1200px)">
-        <img src="<%- imag.fisier %>" alt="<%- imag.titlu %>" title="<%- imag.descriere %>">
-        <figcaption><%- imag.titlu %></figcaption>
+            <picture>
+                <source srcset="<%- imag.fisier_mic %>" media="screen and (max-width: 800px)">
+                <source srcset="<%- imag.fisier_mediu %>" media="screen and (max-width: 1200px)">
+                <img src="<%- imag.fisier %>" alt="<%- imag.titlu %>" title="<%- imag.descriere %>">
+            </picture>
+            <figcaption><%- imag.titlu %></figcaption>
         </figure>
-    <% cnt++}} %>
+    <% } %>
 </div>

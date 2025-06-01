@@ -7,10 +7,11 @@
     width: 100%;
     margin-top: 5rem;
     margin-bottom: 5rem;
+    place-items: center;
 }
 
 #grid-galerie img{
-    width: 75%;
+    width: 100%;
 }
 
 #grid-galerie img:hover{
@@ -126,7 +127,6 @@
      #grid-galerie{
         grid-template-columns: repeat(1, 1fr);
         grid-template-rows: repeat(10, 1fr);
-        place-items: center;
     }
 
     #grid-galerie>figure:nth-child(1){

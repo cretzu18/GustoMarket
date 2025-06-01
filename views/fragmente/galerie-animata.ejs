@@ -1,0 +1,46 @@
+<%
+d = new Date();
+d.setMinutes(5);
+sfert_ora = String(Math.trunc(d.getMinutes() / 15) + 1);
+
+// Filtrăm imaginile care respectă condiția de sfert_ora
+let imaginiFiltrate = locals.imagini.filter(img => img.sfert_ora == sfert_ora);
+
+// Le amestecăm
+for (let i = imaginiFiltrate.length - 1; i > 0; i--) {
+    let j = Math.floor(Math.random() * (i + 1));
+    [imaginiFiltrate[i], imaginiFiltrate[j]] = [imaginiFiltrate[j], imaginiFiltrate[i]];
+}
+
+// Selectăm primele `numarPoze` imagini din cele amestecate
+let imaginiAlese = imaginiFiltrate.slice(0, numarPoze);
+%>
+
+<section id="container_animatie">
+    <div id="derulant" data-count="<%= imaginiAlese.length %>">
+        <% for (let imag of imaginiAlese) { %>
+            <figure>
+                <img src="<%- imag.fisier %>" alt="<%- imag.titlu %>" title="<%- imag.descriere %>">
+                <figcaption><%- imag.titlu %></figcaption>
+            </figure>
+        <% } %>
+        <% let primaImagine = imaginiAlese[0]; %>
+        <figure id="copie">
+            <img src="<%- primaImagine.fisier %>" alt="<%- primaImagine.titlu %>" title="<%- primaImagine.descriere %>">
+            <figcaption><%- primaImagine.titlu %></figcaption>
+        </figure>
+    </div>
+</section>
+
+<script>
+const figures = document.querySelectorAll('#derulant figure');
+const ultimul = figures[figures.length - 2];
+
+ultimul.addEventListener('animationend', () => {
+  figures.forEach(fig => {
+    fig.style.animation = 'none';  // oprește animația
+    void fig.offsetWidth;           // forțează reflow pentru resetare
+    fig.style.animation = '';      // reaplică animația (din CSS)
+  });
+});
+</script>

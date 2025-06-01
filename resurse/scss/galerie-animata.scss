@@ -1,0 +1,96 @@
+$numar-imagini: 6;
+#container_animatie {
+  position: relative;
+  width: 350px;
+  height: 300px;
+  overflow: hidden;
+  box-sizing: border-box;
+  border: 10px solid transparent;
+  border-image: url("../imagini/border.png") 30 round;
+}
+
+#derulant {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+#derulant figure {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  opacity: 1;
+  animation: animatieImagine 5s ease-in-out forwards;
+}
+
+#derulant figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#derulant figure figcaption {
+  position: absolute;
+  bottom: 0;
+  background: rgba(200, 200, 200, 0.5);
+  width: 100%;
+  font-size: 1.5em;
+  text-align: center;
+  padding: 0.2em;
+  z-index: 1;
+}
+
+@keyframes animatieImagine {
+  0% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+  10% {
+    opacity: 0.75;
+    transform: translateX(75%);
+  }
+  40% {
+    opacity: 0.5;
+    transform: translateX(-25%);
+  }
+  70% {
+    opacity: 0.25;
+    transform: translateX(75%);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(150%);
+  }
+}
+
+@for $i from 1 through $numar-imagini {
+  #derulant figure:nth-child(#{$i}) {
+    animation-delay: calc(5s * (#{$i} - 1));
+    z-index: calc($numar-imagini - #{$i} + 1);
+  }
+}
+
+#copie{
+    z-index: 0;
+    animation: none !important;
+}
+
+#derulant figure {
+  animation-play-state: running;
+}
+
+#derulant:hover figure {
+  animation-play-state: paused;
+}
+
+@media screen and (max-width:1200px){
+    #container_animatie {
+        display: none;
+    }
+    #galerie-animata {
+        display: none;
+    }
+}

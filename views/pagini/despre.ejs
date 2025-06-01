@@ -15,6 +15,12 @@
         <%- include("../fragmente/header.ejs") %>
 
         <main>
+            <div class="background-container">
+                <div class="background bg1"></div>
+                <div class="background bg2"></div>
+                <div class="background bg3"></div>
+            </div>
+        
             <section id="despre">
                 <div class="video-container">
                     <video controls preload="none" poster="/resurse/imagini/logo.jpg">
@@ -35,10 +41,26 @@
                     }
                 </style>
 
+                <div class="scroll-container">
+                    <div class="scroll-text">
+                        Cu Gusto Market, gătitul devine o plăcere – simplu, natural și autentic.
+                    </div>
+                </div>
+
                 <h2>Despre noi</h2>
 
-                <p>La Gusto Market, suntem pasionați de gătit și de un stil de viață sănătos. Ne dorim să îți aducem în fiecare zi <b>ingrediente</b> de calitate superioară, alese cu grijă de la cei mai buni furnizori locali și bio, pentru ca tu să te bucuri de <b>gustul</b> autentic al preparatelor tale. 
-                Fie că ești un bucătar amator sau un profesionist, suntem aici pentru a-ți oferi tot ce ai nevoie pentru a crea mese sănătoase, savuroase și pline de energie.</p>
+                <div class="text-coloane">
+                    <p>La Gusto Market, credem că fiecare masă este o ocazie de a avea grijă de tine și de cei dragi. Ne ghidăm după principii simple: <b>calitate, prospețime și responsabilitate</b>.
+                    Lucrăm în parteneriat cu producători care împărtășesc aceleași valori – respect față de natură, grijă pentru mediu și pasiune pentru produse autentice. 
+                    Astfel, în fiecare pachet primit de la noi vei regăsi nu doar alimente, ci și încredere.</p> <p>Pe lângă alimentele de bază, îți oferim o gamă largă de produse pentru nevoi diverse: 
+                    <b>alternative fără gluten</b>, <b>produse vegane</b>, <b>snack-uri sănătoase</b>, <b>uleiuri presate la rece</b>, <b>miere naturală</b> și multe altele. 
+                    Totul este gândit pentru a-ți ușura alegerile zilnice și pentru a sprijini un stil de viață echilibrat, fără compromisuri.</p> 
+                    <p>Fiecare client Gusto Market este important pentru noi. De aceea, investim constant în <b>servicii rapide de livrare</b>, <b>ambalaje sustenabile</b> și <b>asistență dedicată</b>, pentru ca tu să te bucuri de o experiență completă – de la plasarea comenzii până la prepararea mesei.
+                    Ne dorim să devenim partenerul tău de încredere în bucătărie, în fiecare zi.</p> <p>Te invităm să explorezi produsele noastre, să încerci rețetele propuse pe site și să descoperi bucuria de a găti cu ingrediente care aduc savoare, prospețime și sănătate în farfurie. 
+                    </p>
+                </div>
+
+                <hr>
 
                 <p>Ce ne face diferiți?</p>
 
@@ -49,8 +71,17 @@
                     <li>Angajamentul nostru pentru sustenabilitate: Suntem dedicați unui viitor mai verde și mai sănătos, așa că preferăm <b>produsele bio</b> și susținem practici agricole sustenabile.</li>
                 </ol>
 
+                <hr>
+
                 <p>Misiunea noastră este simplă: să facem gătitul mai ușor și mai plăcut pentru tine, oferindu-ți <b>ingrediente</b> de calitate, <b>rețete</b> inovative și inspirație pentru o viață sănătoasă. La Gusto Market, 
                     vrem să aducem un strop de bucurie în fiecare masă și să îți oferim tot ce ai nevoie pentru a crea momente delicioase alături de cei dragi.</p>
+            
+                <div id="imagine"></div>
+            </section>
+
+            <section id="galerie-animata">
+                <h2>Uite rețetele noastre!</h2>
+                <%- include("../fragmente/galerie-animata.ejs") %>
             </section>
 
             <section id="intrebari">

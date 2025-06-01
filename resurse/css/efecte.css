@@ -1,0 +1,211 @@
+#imagine {
+    position: relative;
+    align-self: center;
+    background-image: url("https://cdn.pixabay.com/photo/2015/04/26/09/43/cottages-vacation-rentals-740179_1280.jpg");
+    background-size: cover;
+    background-position: center;
+    width:75%; 
+    height: 50vh;
+    margin: 0 auto;
+    filter:brightness(125%) grayscale(0) ;
+    transition:all 2s linear;
+}
+
+#imagine:after, #imagine:before{
+	content:" ";
+	position:absolute;
+	height:100%;
+	width:100%;
+	top:0;
+	left:0;
+	
+	transition:all 2s linear;
+}
+
+#imagine:after{
+	background-color:rgb(0,0,255);
+	mix-blend-mode:lighten;
+}
+
+#imagine:before{
+	background-color:rgb(205,0,255);
+	mix-blend-mode:darken;
+}
+
+#imagine:hover::before {
+    background-color: rgba(255, 140, 0, 0.25);
+}
+#imagine:hover::after {
+    background-color: rgba(255, 99, 71, 0.25);
+}
+
+#container-text{
+    position: relative;
+}
+
+#text{
+    position: relative
+}
+
+#text-reflectat {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    transform-origin: 0 0;
+    transform: rotateX(180deg) skew(-45deg) scaleY(0.5) translate(3px,-15px);
+    opacity: 0.55;
+
+    mask-image: repeating-linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 1) 0px,
+        rgba(0, 0, 0, 0.8) 1px,
+        rgba(0, 0, 0, 0.3) 2px,
+        rgba(0, 0, 0, 0) 3px
+    );
+    mask-size: 100% 100%;
+    mask-repeat: repeat;
+}
+
+#container-text:hover #text-reflectat {
+    animation: unda 500ms linear infinite;
+}
+
+@keyframes unda {
+    0% {
+        mask-image: repeating-radial-gradient(
+        circle at bottom center,
+        rgba(0, 0, 0, 1) 0px,
+        rgba(0, 0, 0, 0.8) 1px,
+        rgba(0, 0, 0, 0.3) 2px,
+        rgba(0, 0, 0, 0) 3px
+    );
+    }
+    100% {
+        mask-image: repeating-radial-gradient(
+        circle at bottom center,
+        rgba(0, 0, 0, 0) 0px,
+        rgba(0, 0, 0, 0.3) 1px,
+        rgba(0, 0, 0, 0.8) 2px,
+        rgba(0, 0, 0, 1) 3px
+    );
+    }
+}
+
+hr {
+    width: 100%;
+    height: 1em;
+    border-radius: 0.5em;
+    background-color: var(--culoare-aurie); 
+
+    mask-image: repeating-linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 1) 0px,
+        rgba(0, 0, 0, 0) 4px
+    );
+    mask-size: 100% 100%;
+    mask-repeat: repeat;
+}
+
+.text-coloane{
+    column-count: 3;
+    column-rule: 1px solid var(--culoare-aurie);
+}
+
+@media screen and (max-width:1200px) {
+    .text-coloane {
+        column-count: 1;
+    }
+}
+
+p::selection{
+    color: var(--culoare-inchisa);
+    background-color: var(--culoare-aurie);
+}
+
+.scroll-container{
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap
+}
+
+.scroll-text{
+    display: inline-block;
+    padding-left: 100%;
+    animation: scroll-text 10s linear infinite;
+    font-size: 2rem;
+    color: black;
+}
+
+@keyframes scroll-text{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translate(-100%);
+    }
+}
+
+.background-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  opacity: 0;
+  animation: fadeImages 30s infinite;
+  transition: opacity 2s ease-in-out;
+}
+
+.bg1 {
+  background-image: url('/resurse/imagini/background/background1.jpg');
+  animation-delay: 0s;
+}
+
+.bg2 {
+  background-image: url('/resurse/imagini/background/background2.jpg');
+  animation-delay: 10s;
+}
+
+.bg3 {
+    background-image: url('/resurse/imagini/background/background3.png');
+    animation-delay: 20s;
+}
+
+@keyframes fadeImages {
+  0%, 100% { opacity: 0; }
+  10%, 40% { opacity: 1; }
+  50%, 90% { opacity: 0; }
+}
+
+#welcome{
+    position: relative;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: -1;
+}
+
+#welcome p, #welcome h2, #welcome li, #welcome q, #welcome figcaption{
+    color: white;
+}
+
+#video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+    opacity: 0.75;
+}
