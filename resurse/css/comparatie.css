@@ -1,0 +1,28 @@
+.tabel-comparatie {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.tabel-comparatie th,
+.tabel-comparatie td {
+    padding: 12px 20px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+.tabel-comparatie th {
+    background-color: var(--culoare-verde-deschis);
+    font-weight: bold;
+    color: #333;
+}
+
+.tabel-comparatie tr:nth-child(even) {
+    background-color: var(--culoare-verde-inchis);
+}
+
+.tabel-comparatie tr:hover {
+    background-color: #eef;
+    transition: background-color 0.3s ease;
+}

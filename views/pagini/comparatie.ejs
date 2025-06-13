@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html  lang="ro">
+    <head>
+        <title>Comparare produse</title>
+
+        <meta name="keywords" content="gust, ingrediente, ingrediente proaspete, produse bio, condimente, fructe, legume, carne, lactate, rețete, deserturi, deserturi fără zahăr">
+        <meta name="description" content="La GustoMarket poți cumpăra cele mai proaspete ingrediente pentru a realiza cele mai delicioase rețete. Livrare la domiciliu doar în București!">
+        <link rel="stylesheet" type="text/css" href="/resurse/css/produs.css">
+        <link rel="stylesheet" type="text/css" href="/resurse/css/comparatie.css">
+        
+        <%- include("../fragmente/head.ejs");  %> 
+    </head>
+    <body>
+        
+    <%- include("../fragmente/header.ejs");  %> 
+
+    <main>
+        <section>
+            <article id="art-produs">
+                <h2>Comparare produse</h2>
+                <table class="tabel-comparatie">
+                    <tr>
+                        <th>Produse:</th>
+                        <th><h3><span class="nume"><%- produse[0].nume %></span></h3></th>
+                        <th><h3><span class="nume"><%- produse[1].nume %></span></h3></th>
+                    </tr>
+                    <tr>
+                        <td>Pret:</td>
+                        <td><span class="pret"><%- produse[0].pret %> </span></td>
+                        <td><span class="pret"><%- produse[1].pret %> </span></td>
+                    </tr>
+                    <tr>
+                        <td>Descriere:</td>
+                        <td><span class="descriere"><%- produse[0].descriere %> </span></td>
+                        <td><span class="descriere"><%- produse[1].descriere %> </span></td>
+                    </tr>
+                    <tr>
+                        <td>Gramaj:</td>
+                        <td><span class="gramaj"><%- produse[0].gramaj %> </span></td>
+                        <td><span class="gramaj"><%- produse[1].gramaj %> </span></td>
+                    </tr>
+                    <tr>
+                        <td>Categorie:</td>
+                        <td><span class="categorie"><%- produse[0].tip_produs %> </span></td>
+                        <td><span class="categorie"><%- produse[1].tip_produs %> </span></td>
+                    </tr>
+                    <tr>
+                        <td>Vegan:</td>
+                        <td><span class="vegan"><%- produse[0].vegan ? "Da" : "Nu"%> </span></td>
+                        <td><span class="vegan"><%- produse[1].vegan ? "Da" : "Nu"%> </span></td>
+                    </tr>
+                    <tr>
+                        <td>Data expirare:</td>
+                        <td>
+                            <time class="val-data-expirare" datetime="<%= produse[0].data_expirare %>">
+                                <script>
+                                    function capitalize(str) {
+                                        return str.charAt(0).toUpperCase() + str.slice(1);
+                                    }
+
+                                    document.querySelectorAll('time.val-data-expirare').forEach(el => {
+                                        const dateStr = el.getAttribute('datetime');
+                                        if (dateStr) {
+                                            const date = new Date(dateStr);
+                                            if (!isNaN(date)) {
+                                                const zi = date.getDate();
+                                                const luna = date.toLocaleDateString('ro-RO', { month: 'long' });
+                                                const an = date.getFullYear();
+                                                const ziSapt = date.toLocaleDateString('ro-RO', { weekday: 'long' });
+                                                el.textContent = `${zi} ${capitalize(luna)} ${an} (${capitalize(ziSapt)})`;
+                                            } else {
+                                                el.textContent = 'N/A';
+                                            }
+                                        } else {
+                                            el.textContent = 'N/A';
+                                        }
+                                    });
+                                </script>
+                            </time>
+                        </td>
+                        <td>
+                            <time class="val-data-expirare" datetime="<%= produse[1].data_expirare %>">
+                                <script>
+                                    function capitalize(str) {
+                                        return str.charAt(0).toUpperCase() + str.slice(1);
+                                    }
+
+                                    document.querySelectorAll('time.val-data-expirare').forEach(el => {
+                                        const dateStr = el.getAttribute('datetime');
+                                        if (dateStr) {
+                                            const date = new Date(dateStr);
+                                            if (!isNaN(date)) {
+                                                const zi = date.getDate();
+                                                const luna = date.toLocaleDateString('ro-RO', { month: 'long' });
+                                                const an = date.getFullYear();
+                                                const ziSapt = date.toLocaleDateString('ro-RO', { weekday: 'long' });
+                                                el.textContent = `${zi} ${capitalize(luna)} ${an} (${capitalize(ziSapt)})`;
+                                            } else {
+                                                el.textContent = 'N/A';
+                                            }
+                                        } else {
+                                            el.textContent = 'N/A';
+                                        }
+                                    });
+                                </script>
+                            </time>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Ambalaj:</td>
+                        <td><span class="ambalaj"><%- produse[0].tip_ambalaj %> </span></td>
+                        <td><span class="ambalaj"><%- produse[1].tip_ambalaj %> </span></td>
+                    </tr>
+                    <tr>
+                        <td>Tara:</td>
+                        <td><span class="tara"><%- produse[0].tara %> </span></td>
+                        <td><span class="tara"><%- produse[1].tara %> </span></td>
+                    </tr>
+                    <tr>
+                        <td>Imagine:</td>
+                        <td>
+                            <figure class="imag-produs">
+                                <img src="/<%- produse[0].imagine %>" alt="[imagine <%- produse[0].nume %>]" />
+                            </figure>
+                        </td>
+                        <td>
+                            <figure class="imag-produs">
+                                <img src="/<%- produse[1].imagine %>" alt="[imagine <%- produse[1].nume %>]" />
+                            </figure>
+                        </td>
+                    </tr>
+                </table> 
+            </article>
+        </section>
+    </main>
+    
+    <%- include("../fragmente/footer.ejs");  %> 
+
+    </body>
+</html>

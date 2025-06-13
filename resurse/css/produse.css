@@ -15,6 +15,10 @@ main{
     overflow: hidden;
 }
 
+article.produs {
+    background-color: var(--culoare-aurie);
+}
+
 article.produs .container-info-img {
     display: flex;
     justify-content: space-between;
@@ -97,9 +101,9 @@ article.produs .selecteaza-cos {
 .produs{
     position: relative;
 }
-.selecteaza-cos{
+.selecteaza-produs{
     display: inline-block;
-    background-color: var(--culoare-aurie);
+    background-color: var(--culoare-verde-inchis);
     position:absolute;
     bottom:0.5rem;
     right:0.5rem;
@@ -109,7 +113,7 @@ article.produs .selecteaza-cos {
     border:1px solid transparent;
 }
 
-.selecteaza-cos:hover{
+.selecteaza-produs:hover{
     background-color: var(--culoare-verde-deschis);
     
     border:1px solid  var(--culoare-aurie);
@@ -123,6 +127,22 @@ article.produs .selecteaza-cos {
 
 .ambalaj, .gramaj {
     display: none !important;
+}
+
+.btn-compare{
+    position: absolute;
+    bottom: 0.5rem;
+    left: 0.5rem;
+    background-color: var(--culoare-verde-inchis);
+    color: white;
+    padding: 0.3rem 0.6rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+}
+
+.btn-compare:hover{
+    background-color: var(--culoare-verde-deschis);
+    border:1px solid  var(--culoare-aurie);
 }
 
 @media screen and (max-width: 800px) {

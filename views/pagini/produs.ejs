@@ -6,6 +6,7 @@
         <meta name="keywords" content="gust, ingrediente, ingrediente proaspete, produse bio, condimente, fructe, legume, carne, lactate, rețete, deserturi, deserturi fără zahăr">
         <meta name="description" content="La GustoMarket poți cumpăra cele mai proaspete ingrediente pentru a realiza cele mai delicioase rețete. Livrare la domiciliu doar în București!">
         <link rel="stylesheet" type="text/css" href="/resurse/css/produs.css">
+        <script src="/resurse/js/produse.js"></script>
 
         <%- include("../fragmente/head.ejs");  %> 
     </head>
@@ -53,7 +54,10 @@
                 <p>Tara: <span calss="tara"><%- locals.prod.tara %></span></p>
                 <figure class="imag-produs">
                     <img  src="/<%- locals.prod.imagine %>" alt="[imagine <%- locals.prod.nume %>]" />
-                </figure>    
+                </figure>
+                <button class="btn-compare" data-id="<%= locals.prod.id %>" data-nume="<%= locals.prod.nume %>">
+                    Compară
+                </button>  
             </article>
         </section>
     </main>

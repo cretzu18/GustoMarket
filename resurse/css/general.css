@@ -20,6 +20,30 @@ body.dark {
     background-color: var(--culoare-fundal);
 }
 
+body.solarized {
+    --culoare-fundal: #fdf6e3;
+    --culoare-verde-deschis: #859900;
+    --culoare-verde-inchis: #657b83;
+    --culoare-aurie: #b58900;
+    --culoare-deschisa: #eee8d5;
+    --culoare-inchisa: #586e75;
+
+    background-color: var(--culoare-fundal);
+}
+
+#select-tema-wrapper {
+    position: absolute;
+    top: 1.2em;
+    right: 1.2em;
+    color: inherit;
+    font-size: 0.9rem;
+}
+
+#select_tema {
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
 #schimba_tema {
     width: 1em;
     height: 1em;
@@ -498,4 +522,8 @@ main a[href^="http"]:hover::before{
     #grid-pagina > * {
         padding: 2px;
     }
+}
+
+.btn-compare:disabled {
+    background-color: red;
 }

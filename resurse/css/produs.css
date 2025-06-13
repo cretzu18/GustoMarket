@@ -32,6 +32,20 @@ h2{
     width:50%;
     height:auto;
 }
+
+.btn-compare{
+    background-color: var(--culoare-verde-inchis);
+    color: white;
+    padding: 0.3rem 0.6rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+}
+
+.btn-compare:hover{
+    background-color: var(--culoare-verde-deschis);
+    border:1px solid  var(--culoare-aurie);
+}
+
 @media screen and (max-width: 800px){
     #art-produs{
         margin:0 auto;

@@ -183,7 +183,7 @@ p::selection{
 }
 
 @keyframes fadeImages {
-  0%, 100% { opacity: 0; }
+  0%, 10% { opacity: 0; }
   10%, 40% { opacity: 1; }
   50%, 90% { opacity: 0; }
 }

@@ -1,10 +1,22 @@
 window.addEventListener("DOMContentLoaded", function(){
-    document.getElementById("schimba_tema").onclick=function(){
-        if (document.body.classList.toggle("dark")){
-            localStorage.setItem("tema","dark")
+    const select = document.getElementById("select_tema");
+
+    select.addEventListener("change", function () {
+        const temaSelectata = select.value;
+
+        aplicaTema(temaSelectata);
+
+        if (temaSelectata === "light") {
+            localStorage.removeItem("tema");
+        } else {
+            localStorage.setItem("tema", temaSelectata);
         }
-        else{
-            localStorage.removeItem("tema")
+    });
+
+    function aplicaTema(tema) {
+        document.body.classList.remove("dark", "solarized");
+        if (tema !== "light") {
+            document.body.classList.add(tema);
         }
     }
 })

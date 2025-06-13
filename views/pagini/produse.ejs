@@ -7,7 +7,6 @@
         <meta name="description" content="La GustoMarket poți cumpăra cele mai proaspete ingrediente pentru a realiza cele mai delicioase rețete. Livrare la domiciliu doar în București!">
         <link rel="stylesheet" type="text/css" href="/resurse/css/produse.css">
         <script type="text/javascript" src=/resurse/js/produse.js></script>
-
         <%- include("../fragmente/head.ejs");  %> 
     </head>
     <body>
@@ -16,93 +15,127 @@
 
     <main>
         <h2>Produse</h2>
-        <section id="produse">
-            <label>Nume: 
-                <input type="text" id="inp-nume" list="nume-produse" />
-            </label>
-            <label>Tara de origine: 
-                <input type="text" id="inp-tara" list="tara-produse" />
-            </label>
-            <datalist id="nume-produse">
-                <% for (let prod of locals.produse) { %>
-                    <option value="<%= prod.nume %>"></option>
-                <% } %>
-            </datalist>
-            
-            <label>Gramaj minim: <input type="range" id="inp-gramaj" value="0" min="0" max="1000" step="50">
-            <span id="infoRange">(0)</span></label>
+        <div class="container mt-4">
+            <form id="form-filtrare">
+                <div class="row g-3">
+                <div class="col-md-6">
+                    <label class="form-label">Nume</label>
+                    <input type="text" id="inp-nume" list="nume-produse" class="form-control" />
+                    <datalist id="nume-produse">
+                    <% for (let prod of locals.produse) { %>
+                        <option value="<%= prod.nume %>"></option>
+                    <% } %>
+                    </datalist>
+                </div>
 
-            <label>Categorie produs:
-                <select id="inp-categorie" name="tip_produs">
-                <option value="oricare" selected>Oricare</option>
-                <option value="legume">Legume</option>
-                <option value="fructe">Fructe</option>
-                <option value="lactate">Lactate si oua</option>
-                <option value="cereale">Paine si Cereale</option>
-                <option value="carne">Carne</option>
-                </select>
-            </label>
+                <div class="col-md-6">
+                    <label class="form-label">Țara de origine</label>
+                    <input type="text" id="inp-tara" list="tara-produse" class="form-control" />
+                </div>
 
-            <div>Alege tipul de ambalaj:
-                <p><label>Vidat
-                    <input id="ambalaj_vidat" name="tip_ambalaj" value="vidat" type="radio" />
-                </label></p>
-                <p><label>Cutie
-                    <input id="ambalaj_cutie" name="tip_ambalaj" value="cutie" type="radio" />
-                </label></p>
-                <p><label>Punga
-                    <input id="ambalaj_punga" name="tip_ambalaj" value="punga" type="radio" />
-                </label></p>
-                <p><label>Sticla
-                    <input id="ambalaj_sticla" name="tip_ambalaj" value="sticla" type="radio" />
-                </label></p>
-                <p><label>Neambalat
-                    <input id="ambalaj_neambalat" name="tip_ambalaj" value="neambalat" type="radio"/>
-                </label></p>
-                <p><label>Oricare
-                    <input id="ambalaj_oricare" name="tip_ambalaj" value="oricare" type="radio" checked/>
-                </label></p>
+                <div class="col-md-6">
+                    <label class="form-label">Gramaj minim: <span id="infoRange">(0)</span></label>
+                    <input type="range" id="inp-gramaj" value="0" min="0" max="1000" step="50" class="form-range">
+                </div>
+
+                <div class="col-md-6">
+                    <label class="form-label">Categorie produs</label>
+                    <select id="inp-categorie" name="tip_produs" class="form-select">
+                    <option value="oricare" selected>Oricare</option>
+                    <option value="legume">Legume</option>
+                    <option value="fructe">Fructe</option>
+                    <option value="lactate">Lactate și ouă</option>
+                    <option value="cereale">Pâine și cereale</option>
+                    <option value="carne">Carne</option>
+                    </select>
+                </div>
+
+                <div class="col-12">
+                    <label class="form-label">Tip ambalaj</label><br>
+                    <div class="btn-group" role="group">
+                    <% const ambalaje = ["vidat", "cutie", "punga", "sticla", "neambalat", "oricare"]; %>
+                    <% ambalaje.forEach((amb) => { %>
+                        <input type="radio" class="btn-check" name="tip_ambalaj" id="ambalaj_<%= amb %>" value="<%= amb %>" <%= amb === "oricare" ? "checked" : "" %>>
+                        <label class="btn btn-outline-secondary" for="ambalaj_<%= amb %>"><%= amb.charAt(0).toUpperCase() + amb.slice(1) %></label>
+                    <% }); %>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <label class="form-label">Perioada până la expirare</label>
+                    <select id="inp-data-expirare" name="data-expirare" multiple class="form-select">
+                    <option value="0-3">0-3 luni</option>
+                    <option value="3-6">3-6 luni</option>
+                    <option value="6-12">6-12 luni</option>
+                    <option value="12+">Peste 12 luni</option>
+                    </select>
+                </div>
+
+                <div class="col-md-6">
+                    <label class="form-label">Vegan</label><br>
+                    <div class="btn-group" role="group">
+                    <input id="vegan_toate" class="btn-check" type="radio" name="vegan" value="toate" checked>
+                    <label class="btn btn-outline-secondary" for="vegan_toate">Toate</label>
+                    <input id="vegan_da" class="btn-check" type="radio" name="vegan" value="da">
+                    <label class="btn btn-outline-secondary" for="vegan_da">Da</label>
+                    <input id="vegan_nu" class="btn-check" type="radio" name="vegan" value="nu">
+                    <label class="btn btn-outline-secondary" for="vegan_nu">Nu</label>
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <div class="form-floating">
+                    <textarea id="inp-caracteristici" class="form-control" placeholder="Caracteristici (ex: bio, proaspăt, etc.)"></textarea>
+                    <label for="inp-caracteristici">Caracteristici</label>
+                    <div class="invalid-feedback">
+                        Caracteristicile introduse nu sunt valide.
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </form>
             </div>
 
-            <label>Filtrează după perioada până la expirare:
-                <select id="inp-data-expirare" name="data-exipare" multiple>
-                <option value="0-3">0-3 luni</option>
-                <option value="3-6">3-6 luni</option>
-                <option value="6-12">6-12 luni</option>
-                <option value="12+">Peste 12 luni</option>
-                </select>
-            </label>
-            
-            <div>
-                <p>Vegan:</p>
-                <label>
-                    <input type="radio" name="vegan" value="toate" checked> Toate
-                </label>
-                <label>
-                    <input type="radio" name="vegan" value="da"> Da
-                </label>
-                <label>
-                    <input type="radio" name="vegan" value="nu"> Nu
-                </label>
+            <div class="container mt-4">
+                <div class="row g-2">
+                    <div class="col-12 col-md-6 col-lg-3">
+                    <button id="resetare" class="btn btn-danger w-100 d-flex align-items-center justify-content-center gap-2">
+                        <i class="bi bi-x-circle-fill"></i>
+                        <span class="d-none d-sm-inline">Resetează</span>
+                    </button>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-3">
+                    <button id="sortCrescNume" class="btn btn-primary w-100 d-flex align-items-center justify-content-center gap-2">
+                        <i class="bi bi-arrow-up-right-circle-fill"></i>
+                        <span class="d-none d-sm-inline">Sortează crescător după preț și nume</span>
+                    </button>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-3">
+                    <button id="sortDescrescNume" class="btn btn-primary w-100 d-flex align-items-center justify-content-center gap-2">
+                        <i class="bi bi-arrow-down-right-circle-fill"></i>
+                        <span class="d-none d-sm-inline">Sortează descrescător</span>
+                    </button>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-3">
+                    <button id="calcSuma" class="btn btn-secondary w-100 d-flex align-items-center justify-content-center gap-2">
+                        <i class="bi bi-calculator-fill"></i>
+                        <span class="d-none d-sm-inline">Calculează suma produselor selectate</span>
+                    </button>
+                    </div>
+                </div>
             </div>
-
-            <label>
-                <textarea id="inp-caracteristici" placeholder="Caracteristici (ex: proaspete, bio, etc.)"></textarea>
-            </label>
-
-
-            <p>
-                <button class="c1 c2 c3" id="filtrare">Filtreaza</button> 
-                <button id="resetare">Reseteaza</button><br/>
-                <button id="sortCrescNume">Sorteaza crescator dupa pret si nume</button>
-                <button id="sortDescrescNume">Sorteaza descrescator dupa pret si nume</button>
-                <button id="calcSuma">Calculeaza suma produselor selectate</button>
-            </p>
             <p id="p-suma"></p>
+
+            <p id="mesajFaraProduse" style="display:none; color:red; font-weight:bold;">
+            Nu există niciun produs potrivit filtrării.
+            </p>
 
             <div class="grid-produse">
                 <% for( let prod of locals.produse) { %>
-                    <article class="produs" id="elem_">
+                    <article class="produs" id="elem_<%- prod.id %>">
                         <h3 class="nume">Nume: <a href="/produs/<%-prod.id %>" ><span class="val-nume"><%- prod.nume%></span></a></h3>
                         <div class="container-info-img">
                             <table class="info-prod">
@@ -161,10 +194,14 @@
                         <p class="categorie">Categorie:<span class="val-categorie"><%- prod.tip_produs%></span></p>
                         <p class="ambalaj">Ambalaj:<span class="val-ambalaj"><%- prod.tip_ambalaj%></span></p>
                         <p class="gramaj">Gramaj:<span class="val-gramaj"><%- prod.gramaj%></span></p>
-                        <label class="selecteaza-cos">
-                            Selectează:<br/>
-                            <input type="checkbox" class="select-cos" value="<%-prod.id %>" autocomplete="off">
-                        </label>
+                        <button class="btn-compare" data-id="<%= prod.id %>" data-nume="<%= prod.nume %>">
+                            Compară
+                        </button>
+                        <div class="selecteaza-produs" data-id="<%- prod.id %>">
+                            <button class="btn-keep" title="Păstrează produsul">🔓</button>
+                            <button class="btn-hide-temp" title="Ascunde temporar produsul">&#x1F5D1;</button>
+                            <button class="btn-hide-perm" title="Ascunde definitiv produsul">&#x274C;</button>
+                        </div>
                     </article>
                 <% }%>
             </div>
